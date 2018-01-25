@@ -1,0 +1,30 @@
+﻿.nav-react
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li
+    {
+        a
+        {
+            display: block;
+            font-size: 18px;
+            padding: 5px;
+            border: solid 1px black;
+            margin: 2px 0;
+            text-decoration: none;
+            color: #000;
+            background-color: hotpink;
+            transition: all 250ms;
+            &:hover
+            {
+                background-color: lighten(gray, 20%);
+                border-radius: 5px;
+            }
+        }
+        ul {
+            list-style: none;
+        }
+    }
+}

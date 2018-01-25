@@ -15,9 +15,9 @@ exports[`the avatar component given a user name should display the users avatar 
     <img
       alt="photo of "
       className="commentPhoto widget"
-      height={200}
-      src="https://avatars.githubusercontent.com/dfederspiel?s=200"
-      width={200}
+      height={500}
+      src="https://avatars.githubusercontent.com/dfederspiel?s=500"
+      width={500}
     />
     <br />
   </a>
@@ -39,9 +39,9 @@ exports[`the avatar component renders correctly 1`] = `
     <img
       alt="photo of "
       className="commentPhoto widget"
-      height={200}
-      src="https://avatars.githubusercontent.com/dfederspiel?s=200"
-      width={200}
+      height={500}
+      src="https://avatars.githubusercontent.com/dfederspiel?s=500"
+      width={500}
     />
     <br />
   </a>

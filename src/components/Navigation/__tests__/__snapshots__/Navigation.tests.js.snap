@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the navigation component renders correctly 1`] = `
+<div
+  className="testcss"
+>
+  <ul
+    className="nav nav-react"
+  >
+    <li>
+      <a
+        href="http://google.com"
+      >
+        Root Level Node 0
+      </a>
+    </li>
+    <li>
+      <a
+        href="http://google.com"
+      >
+        Root Level Node 1
+      </a>
+      <ul>
+        <li>
+          <a
+            href="http://google.com"
+          >
+            Sub Level 1-0
+          </a>
+        </li>
+        <li>
+          <a
+            href="http://google.com"
+          >
+            Sub Level 1-1
+          </a>
+          <ul>
+            <li>
+              <a
+                href="http://google.com"
+              >
+                Sub Level 1-1-0
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a
+        href="http://google.com"
+      >
+        Root Level Node 2
+      </a>
+      <ul>
+        <li>
+          <a
+            href="http://google.com"
+          >
+            Sub Level 2-0
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+`;

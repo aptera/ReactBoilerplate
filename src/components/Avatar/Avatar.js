@@ -4,10 +4,17 @@ import './avatar.scss';
 class Avatar extends Component {
     constructor(props){
         super(props);
+
+        this.id     = props.id;
+        this.alt    = props.alt;
+        this.user   = props.user;
+        this.size   = props.size;
+
         this.state = {
-            'id': props.id,
-            'alt': props.alt,
-            'user': props.user
+            id:     props.id,
+            alt:    props.alt,
+            user:   props.user,
+            size:   props.size
         };
     }
 
@@ -19,8 +26,8 @@ class Avatar extends Component {
                     <img
                         src={this.getPhotoUrl()}
                         alt={this.state.alt}
-                        width={200}
-                        height={200}
+                        width={this.state.size}
+                        height={this.state.size}
                         className="commentPhoto widget" /><br />
                 </a>
             </div>
@@ -28,7 +35,7 @@ class Avatar extends Component {
     }
 
     getPhotoUrl() {
-        return 'https://avatars.githubusercontent.com/' + this.props.user + '?s=200';
+        return 'https://avatars.githubusercontent.com/' + this.props.user + '?s=' + this.state.size;
     }
 }
 

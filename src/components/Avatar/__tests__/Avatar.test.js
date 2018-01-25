@@ -7,7 +7,8 @@ describe('the avatar component', () => {
     const props = {
         id: 2,
         user: 'dfederspiel',
-        alt: 'photo of '
+        alt: 'photo of ',
+        size: 500
     };
 
     it('renders correctly', () => {

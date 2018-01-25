@@ -1,36 +1,35 @@
 import React, {Component} from 'react';
 import './progressBar.scss';
 
+const gradientStyle = {
+    backgroundImage: 'linear-gradient(90deg, red, green)'
+}
+
 class ProgressBar extends Component {
 
     constructor(props){
         super(props);
         this.state = {
-            name: props.name,
-            maxValue: props.maxValue,
-            value: props.value,
-            currentPercentage: 0,
-            color: props.color
+            maxWidth: 0
         };
-        this.stepper = .001;
         this.targetPercentage = (this.props.value / this.props.maxValue);
-        setTimeout(this.tick.bind(this), 10);
     }
 
-    tick() {
-        this.stepper += .001;
-        let newPercentage = this.state.currentPercentage + this.stepper;
+    progressBarStyle(){
+        return { 
+            backgroundImage: 'linear-gradient(' + this.props.rotation + 'deg, ' + this.props.color + ', ' + this.props.color2 + ')',
+            maxWidth: this.state.maxWidth, 
+            backgroundColor: this.props.color, 
+            borderRadius: this.getRadius() 
+        };
+    }
 
-        this.setState({
-            currentPercentage: newPercentage > 1 ? 1 : newPercentage
-        });
-
-        if(newPercentage < this.targetPercentage)
-            setTimeout(this.tick.bind(this), 10);
+    componentDidMount(){
+        setTimeout(() => this.setState({maxWidth: (this.targetPercentage * 100) + "%"}), 10);
     }
 
     getRadius() {
-        return '15px ' + ((this.state.currentPercentage >= 1) ? '15px 15px' : '0 0') + ' 15px';
+        return '5px ' + ((this.targetPercentage * 100 >= 100) ? '5px 5px' : '0 0') + ' 5px';
     }
 
     render() {
@@ -38,8 +37,8 @@ class ProgressBar extends Component {
             <div className="progress-bar-wrapper">
                 <label>Progress &reg; Bar</label>
                 <div className="progress-bar">
-                    <div className="progress-bar-progress" style={{ backgroundColor: this.props.color, width: this.state.currentPercentage * 100 + '%', borderRadius: this.getRadius() }}>
-                        <div className="percentage">{Math.round(this.state.currentPercentage * 100)}</div>
+                    <div className="progress-bar-progress" style={this.progressBarStyle()}>
+                        <div className="percentage">{Math.round(this.targetPercentage * 100)}</div>
                     </div>
                 </div>
             </div>
