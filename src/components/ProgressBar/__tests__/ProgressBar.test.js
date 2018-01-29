@@ -18,12 +18,12 @@ describe('the progress bar component', () => {
     it('will set a radius of 15px for just the TL & BL of the bar if current percentage is less than 1', () => {
         var ProgressBarComponent = ReactTestUtils.renderIntoDocument(<ProgressBar maxValue={100} value={50} />);
         var radius = ProgressBarComponent.getRadius();
-        expect(radius).toBe('15px 0 0 15px');
+        expect(radius).toBe('5px 0 0 5px');
     });
 
     it('will set a radius of 15px for all corners of the bar if current percentage is equal to or greater than 1', () => {
         var ProgressBarComponent = ReactTestUtils.renderIntoDocument(<ProgressBar maxValue={100} value={100} />);
         var radius = ProgressBarComponent.getRadius();
-        expect(radius).toBe('15px 15px 15px 15px');
+        expect(radius).toBe('5px 5px 5px 5px');
     });
 });

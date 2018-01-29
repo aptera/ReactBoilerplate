@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the salutation component renders correctly 1`] = `
-<h1>
-  Salutations!
-</h1>
+<div
+  className={undefined}
+>
+  <a
+    href="https://www.merriam-webster.com/dictionary/Salutations!"
+  >
+    Salutations!
+  </a>
+</div>
 `;

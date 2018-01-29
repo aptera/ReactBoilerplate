@@ -15,7 +15,7 @@ describe('the salutation component', () => {
     describe('given no words', () => {
         it('displays a default salutation', () => {
             let SalutationComponent = ReactTestUtils.renderIntoDocument(<Salutation />);
-            let h1 = ReactTestUtils.findRenderedDOMComponentWithTag(SalutationComponent, 'h1');
+            let h1 = ReactTestUtils.findRenderedDOMComponentWithTag(SalutationComponent, 'div');
             expect(h1.textContent).toBe('Salutations!');
         });
     });
@@ -23,7 +23,7 @@ describe('the salutation component', () => {
     describe('given a word', ()=> {
         it('displays that word instead of the default', () => {
             let SalutationComponent = ReactTestUtils.renderIntoDocument(<Salutation words="Hello!" />);
-            let h1 = ReactTestUtils.findRenderedDOMComponentWithTag(SalutationComponent, 'h1');
+            let h1 = ReactTestUtils.findRenderedDOMComponentWithTag(SalutationComponent, 'div');
             expect(h1.textContent).toBe('Hello!');
         });
     });
@@ -31,7 +31,7 @@ describe('the salutation component', () => {
     describe('given a comma separated list of values', () => {
         it('displays one word from the list', () => {
             let SalutationComponent = ReactTestUtils.renderIntoDocument(<Salutation words="Hello!, Hello!" />);
-            let h1 = ReactTestUtils.findRenderedDOMComponentWithTag(SalutationComponent, 'h1');
+            let h1 = ReactTestUtils.findRenderedDOMComponentWithTag(SalutationComponent, 'div');
             expect(h1.textContent).toBe('Hello!');
         });
     });

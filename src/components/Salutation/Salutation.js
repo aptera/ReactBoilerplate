@@ -1,13 +1,33 @@
 import React, {Component} from 'react';
 import './salutation.scss';
+import { setInterval } from 'timers';
 
 class Salutation extends Component {
 
     constructor(props){
         super(props);
+        
+        this.intervalId = 0;
+        this.wordsArray = props.words === undefined ? ['Salutations!'] : this.makeWordArray(props.words);
+        this._isMounted = false;  // using a flag because: https://reactjs.org/blog/2015/12/16/ismounted-antipattern.html
+        let word = this.getRandomWord();
         this.state = {
-            wordsArray: props.words === undefined ? ['Salutations!'] : this.makeWordArray(props.words)
+            word: word
         };
+    }
+
+    componentDidMount() {
+        this._isMounted = true;
+        if (this.props.refreshInterval) {
+            this.intervalId = setInterval(this.changeWord.bind(this), this.props.refreshInterval);
+        }
+    }
+
+    changeWord() {
+        if(!this._isMounted)
+            return;
+        let word = this.getRandomWord();
+        this.setState({ word: word });
     }
 
     makeWordArray(wordsString) {
@@ -16,13 +36,18 @@ class Salutation extends Component {
         });
     }
 
+    componentWillUnmount() {
+        this._isMounted = false;
+        clearInterval(this.intervalId);
+    }
+
     getRandomWord(){
-        return this.state.wordsArray[Math.floor(Math.random() * this.state.wordsArray.length)];
+        return this.wordsArray[Math.floor(Math.random() * this.wordsArray.length)];
     }
 
     render() {
         return (
-            <h1>{this.getRandomWord()}</h1>
+            <div className={this.props.class}><a href={'https://www.merriam-webster.com/dictionary/' + this.state.word}>{this.state.word}</a></div>
         );
     }
 }

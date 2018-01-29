@@ -15,9 +15,15 @@ exports[`the progress bar component renders correctly 1`] = `
       style={
         Object {
           "backgroundColor": "red",
+<<<<<<< HEAD
           "borderRadius": "15px 0 0 15px",
           "maxWidth": "75%",
           "transition": "width 15s",
+=======
+          "backgroundImage": "linear-gradient(undefineddeg, red, undefined)",
+          "borderRadius": "5px 0 0 5px",
+          "maxWidth": 0,
+>>>>>>> upstream/master
         }
       }
     >

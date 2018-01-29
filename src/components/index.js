@@ -8,5 +8,6 @@ module.exports = {
     Articles: require('./Articles/Article').default,
     Avatar: require('./Avatar/Avatar').default,
     Button: require('./Button/Button').default,
+    Navigation: require('./Navigation/Navigation').default,
     Salutation: require('./Salutation/Salutation').default
 };

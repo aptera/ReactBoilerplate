@@ -13,8 +13,8 @@
             justify-content: flex-end;
             box-shadow: 5px 5px 15px rgba(0,0,0,.2);
             min-width: 0;
-            max-width: 100%;
-            transition: width 15s ease-in;
+            width: 100%;
+            transition: all 1s ease;
         }
 
         .percentage {
