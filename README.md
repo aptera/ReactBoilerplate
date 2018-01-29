@@ -31,7 +31,17 @@ npm install
 * [faker](https://github.com/Marak/Faker.js)
 
 ## Codebase
-This boilerplate comes with a number of tools you can use to quickly author react components.  There are a number of components already here to get you started.
+This boilerplate comes with a number of tools you can use to quickly author react components.  There are a number of components already here to get you started, but here's a breakdown of where things are:
+
+* \_\_mocks\_\_
+* dist
+* docs
+* src
+    * components
+    * data
+    * lib
+    * scenes
+* webpack
 
 ## Resources
 * [React](https://reactjs.org/)
