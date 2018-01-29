@@ -36,7 +36,7 @@ class Salutation_Page extends Component {
         return (
             <div style={divStyles}>
                 <div style={small}><Salutation refreshInterval={8000} words={prefixes.join(',')} /></div>
-                <div style={large}><Salutation refreshInterval={800} words={verbs.join(',')} /></div>
+                <div style={large}><Salutation refreshInterval={8000} words={verbs.join(',')} /></div>
                 <div style={small}><Salutation words="the,a" /></div>
                 
                 <div style={large}><Salutation refreshInterval={8000} words={nouns.join(',')} /></div>

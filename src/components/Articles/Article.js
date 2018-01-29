@@ -9,7 +9,8 @@ const Article = (props) => {
             <div className="date">{article.date}</div>
             <div>
                 <a className="website" href={author.website}>
-                    {author.firstName} {author.lastName} GitHub Account
+                    <img src={author.avatar} /><br />
+                    {author.firstName} {author.lastName}
                 </a>
             </div>
             <div className="body">{article.body}</div>

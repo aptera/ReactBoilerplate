@@ -9,7 +9,7 @@ class App extends Component {
         return (
             <div className='app'>
                
-                <ProgressBar maxValue={1000} value={500} color="hotpink" color2="purple" rotation="5" />
+                <ProgressBar maxValue={1000} value={500} color="hotpink" color2="purple" rotation="90" />
                 <ProgressBar maxValue={234} value={234} color="blue" color2="hotpink" rotation="10"  />
                 <ProgressBar maxValue={2346} value={1234} color="green" color2="yellow" rotation="15"  />
                 <ProgressBar maxValue={100} value={26.5} color="yellow" color2="green" rotation="20"  />

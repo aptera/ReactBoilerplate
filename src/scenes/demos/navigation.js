@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import { sitemap } from '../data/db.json';
+import { sitemap } from '../../data/db.json';
 import Navigation from '../../components/Navigation/Navigation';
 
 

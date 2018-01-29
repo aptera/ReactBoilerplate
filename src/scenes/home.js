@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-import { authors, articles, sitemap } from './data/db.json';
-import Navigation from '../components/Navigation/Navigation';
+// import { authors, articles, sitemap } from '../data/db.json';
+// import Navigation from '../components/Navigation/Navigation';
 
 
 class Home extends Component {
