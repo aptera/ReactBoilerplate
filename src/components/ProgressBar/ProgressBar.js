@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
 import './progressBar.scss';
 
-const gradientStyle = {
-    backgroundImage: 'linear-gradient(90deg, red, green)'
-}
-
 class ProgressBar extends Component {
 
     constructor(props){
@@ -25,7 +21,7 @@ class ProgressBar extends Component {
     }
 
     componentDidMount(){
-        setTimeout(() => this.setState({maxWidth: (this.targetPercentage * 100) + "%"}), 10);
+        setTimeout(() => this.setState({maxWidth: (this.targetPercentage * 100) + '%'}), 10);
     }
 
     getRadius() {
