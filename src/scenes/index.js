@@ -11,6 +11,7 @@ import PomodoroTimer_Page from './demos/pomodorotimer';
 import Greeter_Page from './demos/greeter';
 import Salutation_Page from './demos/salutation';
 import ArticleList_Page from './demos/articles';
+import SociaLite_Page from './demos/socialite';
 
 import Sandbox from './sandbox';
 
@@ -37,6 +38,7 @@ const App = () => (
                             <li><Link to="/demos/greeter">Greeter</Link></li>
                             <li><Link to="/demos/nametag">Name Tag</Link></li>
                             <li><Link to="/demos/articles">Articles</Link></li>
+                            <li><Link to="/demos/socialite">Socialite</Link></li>
                         </ul>
                     </li>
                     <li><Link to="/sandbox">Sandbox</Link></li>
@@ -57,6 +59,7 @@ const App = () => (
                 <Route exact path="/demos/progressbar" component={ProgressBar_Page}/>
                 <Route exact path="/demos/salutation" component={Salutation_Page}/>
                 <Route exact path="/demos/articles" component={ArticleList_Page}/>
+                <Route exact path="/demos/socialite" component={SociaLite_Page}/>
             </div>
         </div>
     </Router>

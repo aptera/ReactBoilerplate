@@ -78,6 +78,7 @@
     "object.values": "^1.0.4",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
+    "react-fontawesome": "^1.6.1",
     "react-router-dom": "^4.2.2",
     "sec-to-min": "^1.0.1"
   }
