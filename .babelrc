@@ -1,5 +1,4 @@
 {
-  "plugins": ["transform-object-rest-spread"],
   "env": {
     "development": {
       "presets": ["flow", ["env", {"modules": false}], "react"],
