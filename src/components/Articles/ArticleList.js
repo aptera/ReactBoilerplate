@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Article from './Article';
-import values from 'object.values';
 
 class ArticleList extends Component {
     
@@ -30,7 +29,7 @@ class ArticleList extends Component {
         return (
             <div style={{ textAlign: 'center', margin: '20px' }}>
                 <div className="articles">
-                    {values(this.state.articles).map((article) => 
+                    {this.state.articles.map((article) => 
                         <Article
                             key={article.id}
                             article={article}
