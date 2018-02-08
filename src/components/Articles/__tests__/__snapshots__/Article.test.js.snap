@@ -17,10 +17,13 @@ exports[`The Article renders correctly 1`] = `
       className="website"
       href="https://github.com/dfederspiel"
     >
+      <img
+        src={undefined}
+      />
+      <br />
       David
        
       Federspiel
-       GitHub Account
     </a>
   </div>
   <div

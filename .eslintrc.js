@@ -10,7 +10,6 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:react/recommended'],
   parserOptions: {
     ecmaFeatures: {
-      experimentalObjectRestSpread: true,
       jsx: true,
     },
     sourceType: 'module',
@@ -18,11 +17,11 @@ module.exports = {
   plugins: ['react'],
   rules: {
     'react/prop-types': ['off'],
-    indent: ['error', 4, { SwitchCase: 1 }],
+    'indent': ['error', 4, { SwitchCase: 1 }],
     'linebreak-style': ['error', 'windows'],
-    quotes: ['error', 'single'],
-    semi: ['error', 'always'],
+    'quotes': ['error', 'single'],
+    'semi': ['error', 'always'],
     'no-console': ['warn', { allow: ['info', 'error'] }],
-    'arrow-parens': ['error', 'always'],
+    'arrow-parens': ['error', 'always']
   },
 };

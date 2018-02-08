@@ -1,7 +1,10 @@
+// @flow
 import React, { Component } from 'react';
 import './pomodoroTimer.scss';
 var secToMin = require('sec-to-min');
-
+/**
+ * A pomodoro timer
+ */
 class PomodoroTimer extends Component {
     constructor(props) {
         super(props);
@@ -67,6 +70,11 @@ class PomodoroTimer extends Component {
 
         if(this.state.isPaused)
             return;
+
+        if(this.state.currentTime == 0){
+            clearInterval(this.intervalId);
+            return;
+        }
 
         this.setState({
             currentTime: this.state.currentTime - 1
