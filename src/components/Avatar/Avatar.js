@@ -12,17 +12,10 @@ class Avatar extends Component<AvatarProps> {
 
     constructor(props: AvatarProps){
         super(props);
-        
-        // this.alt    = props.alt;
-        // this.user   = props.user;
-        // this.size   = props.size;
     }
 
     componentWillReceiveProps(props: AvatarProps){
         this.props = props;
-        // this.alt    = props.alt;
-        // this.user   = props.user;
-        // this.size   = props.size;
     }
 
     render() {
