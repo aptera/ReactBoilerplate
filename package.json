@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --config webpack/dev.config.js",
     "analyze": "webpack --config webpack/analyze.config.js",
     "test": "jest --notify --watch --coverage",
-    "json": "json-server --watch src/data/generate.js"
+    "flow": "flow"
   },
   "jest": {
     "verbose": true,
@@ -36,6 +36,7 @@
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "bootstrap-loader": "^2.2.0",
     "css-loader": "^0.28.7",
