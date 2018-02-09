@@ -3,27 +3,24 @@ import FontAwesome from 'react-fontawesome';
 import './socialite.scss';
 
 class SociaLiteItem extends Component {
-    constructor(props){
-        super(props);
-        this.title = props.title;
-        this.iconName = props.iconName;
-        this.url = props.url;
-        this.size = props.size;
-    }
 
     componentWillReceiveProps(props) {
-        this.title = props.title;
-        this.iconName = props.iconName;
-        this.url = props.url;
-        this.size = props.size;
+        this.props = props;
+    }
+    getLink(url){
+        url=url.replace('{SUBJECT}', this.props.subject);
+        url=url.replace('{SUMMARY}', this.props.summary);
+        url=url.replace('{LINK}', this.props.link);
+
+        return url;
     }
 
     render() {
         return (
             <li>
-                <a href={this.url}>
-                    <FontAwesome name={this.iconName} size={this.size} style={{color:this.props.color}}/>
-                    <span>{this.title}</span>
+                <a href={this.getLink(this.props.url)}>
+                    <FontAwesome name={this.props.iconName} size={this.props.size}/>
+                    <span>{this.props.title}</span>
                 </a>
             </li>
         );
