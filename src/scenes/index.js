@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Home from './home';
-
 import ProgressBar_Page from './demos/progressbar';
 import Navigation_Page from './demos/navigation';
 import Avatar_Page from './demos/avatar';
@@ -12,8 +10,6 @@ import Greeter_Page from './demos/greeter';
 import Salutation_Page from './demos/salutation';
 import ArticleList_Page from './demos/articles';
 import SociaLite_Page from './demos/socialite';
-
-import Sandbox from './sandbox';
 
 import {
     BrowserRouter as Router,
@@ -26,7 +22,6 @@ const App = () => (
         <div style={{ display: 'flex' }}>
             <div style={{ width: '25%', padding: '25px' }}>
                 <ul>
-                    <li><Link to="/home">Home</Link></li>
                     <li><Link to="/demos">Components</Link>
                         <ul>
                             <li><Link to="/demos/salutation">Salutation</Link></li>
@@ -41,14 +36,10 @@ const App = () => (
                             <li><Link to="/demos/socialite">Socialite</Link></li>
                         </ul>
                     </li>
-                    <li><Link to="/sandbox">Sandbox</Link></li>
                 </ul>
             </div>
             <div style={{ width: '75%', padding: '25px' }}>
-                <Route exact path="/home" component={Home}/>
                 <Route exact path="/demos" component={Components}/>
-                <Route exact path="/sandbox" component={Sandbox}/>
-
 
                 <Route exact path="/demos/pomodorotimer" component={PomodoroTimer_Page}/>
                 <Route exact path="/demos/avatar" component={Avatar_Page}/>
