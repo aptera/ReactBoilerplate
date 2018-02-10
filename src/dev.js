@@ -18,5 +18,5 @@ render(App);
 
 if (module.hot) module.hot.accept('./scenes/index.js', () => render(App));
 
-// Expose collection to UI - Interferes with Hot Module Reloading
+// Expose collection to UI
 require('expose-loader?Components!./components');
