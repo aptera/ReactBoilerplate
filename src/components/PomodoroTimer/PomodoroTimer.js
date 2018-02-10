@@ -1,4 +1,3 @@
-// @flow
 import React, { Component } from 'react';
 import './pomodoroTimer.scss';
 var secToMin = require('sec-to-min');
@@ -22,11 +21,12 @@ class PomodoroTimer extends Component {
         this.intervalId = 0;
     }
 
-    // https://facebook.github.io/react/docs/react-component.html#componentdidmount
+    // https://reactjs.org/docs/react-component.html#componentdidmount
     componentDidMount() {
         this.intervalId = setInterval(this.tick.bind(this), 1000);
     }
 
+    // https://reactjs.org/docs/react-component.html#componentwillmount
     componentWillUnmount() {
         clearInterval(this.intervalId);
     }
@@ -71,6 +71,7 @@ class PomodoroTimer extends Component {
         if(this.state.isPaused)
             return;
 
+        // if the timer has run to zero, clear it
         if(this.state.currentTime == 0){
             clearInterval(this.intervalId);
             return;

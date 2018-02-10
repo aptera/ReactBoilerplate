@@ -6,6 +6,7 @@ class SociaLiteItem extends Component {
 
     componentWillReceiveProps(props) {
         this.props = props;
+        this.openWindow = this.openWindow.bind(this);
     }
     getLink(url){
         url=url.replace('{SUBJECT}', this.props.subject);
@@ -13,6 +14,11 @@ class SociaLiteItem extends Component {
         url=url.replace('{LINK}', this.props.link);
 
         return url;
+    }
+
+    openWindow(e){
+        window.open('google.com', 'Facebook', 'tolbar=0,status=0,resizable=yes,width=300,height=450');
+        e.preventDefault();
     }
 
     render() {
