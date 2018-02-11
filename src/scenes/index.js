@@ -62,4 +62,7 @@ const Components = () => (
     </div>
 );
 
+// Expose collection to UI
+require('expose-loader?Components!../components');
+
 export default App;
