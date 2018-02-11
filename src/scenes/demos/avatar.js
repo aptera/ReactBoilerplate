@@ -11,10 +11,12 @@ class Avatar_Page extends Component {
     render() {
         return (
             <div style={divStyle}>
-                <Avatar alt="test" user="dfederspiel" size={250} />
-                <Avatar user="linzxe" size={250} />
-                <Avatar user="nbalcolm" size={250} />
-                <Avatar alt="alternate text" user="github" size={250} />
+                <Avatar user="dfederspiel" size={150} />
+                <Avatar user="linzxe" size={150} />
+                <Avatar user="nbalcolm" size={150} />
+                <Avatar user="benbakle" size={150} />
+                <Avatar user="RobertMcCoy" size={150} />
+                <Avatar user="zeek55555" size={150} />
             </div>
         );
     }
