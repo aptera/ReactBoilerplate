@@ -1,5 +1,4 @@
 ﻿import React, { Component } from 'react';
-import values from 'object.values';
 import './navigation.scss';
 
 class Navigation extends Component {
@@ -28,7 +27,7 @@ class Navigation extends Component {
 
         return (
             <ul>
-                {values(node.ChildNodes).map((node) =>
+                {node.ChildNodes.map((node) =>
                     <li key={'sub_' + node.Title}>
                         <a href={node.Url}>{node.Title}</a>
                         {this.renderSubLevelsRecursive(node, level + 1)}
@@ -42,7 +41,7 @@ class Navigation extends Component {
         return (
             <div className={this.props.Model.CssClass}>
                 <ul className="nav nav-react">
-                    {values(this.props.Model.Nodes).map((node) =>
+                    {this.props.Model.Nodes.map((node) =>
                         this.renderRootLevelNode(node)
                     )}
                 </ul>

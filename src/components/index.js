@@ -1,5 +1,5 @@
 // Used with expose-loader, which exposes the following modules
-// for use in Razor references and also client side.
+// for use in client 
 
 module.exports = {
     NameTag: require('./NameTag/NameTag').default,

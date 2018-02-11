@@ -11,10 +11,6 @@ class PomodoroTimer_Page extends Component {
             <div style={divStyles}>
                 <PomodoroTimer defaultTime="1800" breakTime="300" />
                 <PomodoroTimer defaultTime="60" breakTime="60" />
-                <PomodoroTimer defaultTime="1800" breakTime="300" />
-                <PomodoroTimer defaultTime="1800" breakTime="300" />
-                <PomodoroTimer defaultTime="60" breakTime="60" />
-                <PomodoroTimer defaultTime="3600" breakTime="180" />
             </div>
         );
     }

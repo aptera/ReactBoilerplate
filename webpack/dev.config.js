@@ -20,17 +20,23 @@ module.exports = merge(baseConfig, {
         loaders: [
             {
                 test: /\.scss$/,
-                use: [{
-                    loader: 'style-loader'
-                }, {
-                    loader: 'css-loader', options: {
-                        sourceMap: true
-                    }
-                }, {
-                    loader: 'sass-loader', options: {
-                        sourceMap: true
-                    }
-                }]
+                use: [
+                    { loader: 'style-loader'}, 
+                    { loader: 'css-loader', options: { sourceMap: true } }, 
+                    { loader: 'sass-loader', options: { sourceMap: true } }
+                ]
+            },
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                    'file-loader',
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true,
+                        },
+                    },
+                ],
             }
         ]
     },

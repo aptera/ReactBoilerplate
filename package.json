@@ -7,7 +7,8 @@
     "start": "webpack-dev-server --config webpack/dev.config.js",
     "analyze": "webpack --config webpack/analyze.config.js",
     "test": "jest --notify --watch --coverage",
-    "json": "json-server --watch src/data/generate.js"
+    "json": "json-server --watch src/data/generate.js",
+    "flow": "flow"
   },
   "jest": {
     "verbose": true,
@@ -36,8 +37,8 @@
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
     "bootstrap-loader": "^2.2.0",
     "css-loader": "^0.28.7",
     "eslint": "^4.11.0",
@@ -46,10 +47,14 @@
     "expose-loader": "^0.7.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "faker": "^4.1.0",
+    "fetch-mock": "^6.0.0",
     "file-loader": "^0.11.2",
+    "gulp": "^3.9.1",
+    "gulp-run": "^1.7.1",
     "html-webpack-plugin": "^2.30.1",
     "http-server": "^0.10.0",
     "identity-obj-proxy": "^3.0.0",
+    "image-webpack-loader": "^4.1.0",
     "jest": "^21.2.1",
     "json-loader": "^0.5.7",
     "json-server": "^0.12.1",
@@ -75,9 +80,9 @@
     "webpack-merge": "^4.1.1"
   },
   "dependencies": {
-    "object.values": "^1.0.4",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
+    "react-fontawesome": "^1.6.1",
     "react-router-dom": "^4.2.2",
     "sec-to-min": "^1.0.1"
   }

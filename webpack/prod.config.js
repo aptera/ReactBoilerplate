@@ -24,15 +24,32 @@ module.exports = merge(baseConfig, {
             {
                 test: /\.scss$/,
                 use: ExtractSass.extract({
-                    use: [{
-                        loader: 'css-loader'
-                    }, {
-                        loader: 'sass-loader'
-                    }],
+                    use: [
+                        { loader: 'css-loader' }, 
+                        { loader: 'sass-loader' }
+                    ],
                     // use style-loader in development
                     fallback: 'style-loader'
                 }),
                 exclude: /node_modules/
+            },
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8000,
+                            name: '/images/[name]_[sha512:hash:base64:7].[ext]'
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true,
+                        },
+                    },
+                ],
             }
         ]
     },
