@@ -41,6 +41,11 @@ class PomodoroTimer extends Component {
         this.setState({
             currentTime: this.state.defaultBreakTime
         });
+
+        if(this.state.isPaused){
+            this.setState({isPaused: false});
+            this.intervalId = setInterval(this.tick.bind(this), 1000);
+        }
     }
 
     handlePauseClick(){
