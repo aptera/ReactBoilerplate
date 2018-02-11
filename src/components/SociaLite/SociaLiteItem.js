@@ -9,10 +9,7 @@ class SociaLiteItem extends Component {
         this.openWindow = this.openWindow.bind(this);
     }
     getLink(url){
-        url=url.replace('{SUBJECT}', this.props.subject);
-        url=url.replace('{SUMMARY}', this.props.summary);
-        url=url.replace('{LINK}', this.props.link);
-
+        url=url.replace('{URL}', url);
         return url;
     }
 

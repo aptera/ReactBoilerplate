@@ -8,7 +8,6 @@ class FaceBookSociaLiteItem extends SociaLiteItem {
     constructor(props){
         super(props);
         this.url = 'https://www.facebook.com/sharer/sharer.php?u={URL}';
-        this.color = '#306199';
         this.openWindow = this.openWindow.bind(this);
     }
 
@@ -27,10 +26,10 @@ class FaceBookSociaLiteItem extends SociaLiteItem {
 
     render() {
         return (
-            <li>
+            <li className="facebook">
                 <a href={this.getLink()} onClick={this.openWindow}>
-                    <FontAwesome style={{color: this.color}} name="facebook" size={this.props.size}/>
-                    <span>facebook</span>
+                    <FontAwesome name="facebook" size={this.props.size}/>
+                    <span>Facebook</span>
                 </a>
             </li>
         );
