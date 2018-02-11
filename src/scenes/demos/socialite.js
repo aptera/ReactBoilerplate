@@ -2,12 +2,18 @@ import React, {Component} from 'react';
 import SociaLite from '../../components/SociaLite/SociaLite';
 
 const data = [
-    // {
-    //     title: 'Email',
-    //     iconName: 'envelope',
-    //     url: 'mailto:?Subject={SUBJECT}',
-    //     color: 'red'
-    // },
+    {
+        type: 'email',
+        subject: 'Studies Show',
+        body: 'That one can prevent wrecking themselves if one first checks themselves',
+        to: 'dfederspiel@federnet.com',
+        cc: '',
+        bcc: ''
+    },
+    {
+        type: 'email',
+        to: 'dfederspiel@federnet.com',
+    },
     // {
     //     title: 'Twitter',
     //     iconName: 'twitter',
@@ -17,6 +23,27 @@ const data = [
     {
         type: 'facebook',
         url: 'https://blog.apterainc.com' // optional, uses current page if not specified.
+    },
+    {
+        type: 'google-plus'
+    },
+    {
+        type: 'facebook',
+        url: 'https://blog.apterainc.com' // optional, uses current page if not specified.
+    },
+    {
+        type: 'google-plus'
+    },
+    {
+        type: 'facebook',
+        url: 'https://blog.apterainc.com' // optional, uses current page if not specified.
+    },
+    {
+        type: 'google-plus'
+    },
+    {
+        type: 'facebook',
+        //url: 'https://blog.apterainc.com' // optional, uses current page if not specified.
     },
     {
         type: 'google-plus'
@@ -60,7 +87,7 @@ class SociaLite_Page extends Component {
     render() {
         return (
             <div>
-                <SociaLite data={data} size="4x" />
+                <SociaLite data={data} size="lg" />
             </div>
         );
     }
